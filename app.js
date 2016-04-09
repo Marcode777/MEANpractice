@@ -1,3 +1,14 @@
-var meanApp = angular.module('meanapp', []); 
+var meanApp = angular.module('meanApp', ['ngRoute']); 
 
-meanApp.controller[("appCtrl")];
+
+
+meanApp.config(function($routeProvider){
+  $routeProvider
+    .when('/', {
+      templateUrl : 'home.html',
+      controller : 'appCtrl'
+    });
+})
+meanApp.controller("appCtrl" , function() {
+
+});
